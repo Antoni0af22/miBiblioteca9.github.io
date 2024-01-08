@@ -21,6 +21,4 @@ export const saveLibro = (titulo, autor, editorial, isbn, fecha) =>
     addDoc(collection(db, "libros"), { titulo, autor, editorial, isbn, fecha });
 
 //lista libros
-export const getLibros() => getDocs(collection(db,'libros'));
-
 export const onGetLibros = (callback) => onSnapshot(collection(db,'libros'),callback)
